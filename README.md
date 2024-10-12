@@ -1,2 +1,2 @@
 # CS437-Lab2
-CS-437 Lab 2
+This is the codelab for CS437-lab2 from IOT Tinkerers
