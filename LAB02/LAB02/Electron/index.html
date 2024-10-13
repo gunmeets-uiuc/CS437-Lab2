@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiCar Control</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>PiCar Control</h1>
+
+    <div class="control-panel">
+        <button class="arrow up" onclick="moveCar('FORWARD')">▲</button><br>
+        <button class="arrow left" onclick="moveCar('LEFT')">◀</button>
+        <button class="arrow stop" onclick="stopCar()">■</button>
+        <button class="arrow right" onclick="moveCar('RIGHT')">▶</button><br>
+        <button class="arrow down" onclick="moveCar('BACKWARD')">▼</button>
+    </div>
+    
+    <br><br>
+    <div>
+        <p>CPU Temperature: <span id="CPU_temperature">N/A</span> °C</p>
+        <p>GPU Temperature: <span id="GPU_temperature">N/A</span> °C</p>
+        <p>CPU Usage: <span id="CPU_Usage">N/A</span> %</p>
+        <p>Battery: <span id="Battery_Usage">N/A</span> </p>
+        <p>Disk: <span id="Disk_Usage">N/A</span> </p>
+        <p>RAM: <span id="RAM_Usage">N/A</span> </p>
+        <p>Speed: <span id="speed">0</span> </p>
+        <p>Distance: <span id="distance">0</span> Centimeters</p>
+    </div>
+</body>
+</html>
+
