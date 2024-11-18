@@ -1,0 +1,68 @@
+{
+    "RecipeFormatVersion": "2020-01-25",
+    "ComponentName": "com.lab4.cs437",
+    "ComponentVersion": "0.0.1",
+    "ComponentDescription": "AWS Greengrass PubSub SDK template component.",
+    "ComponentPublisher": "IOT team",
+    "ComponentConfiguration": {
+      "DefaultConfiguration": {
+        "GGV2PubSubSdkConfig": {
+          "base-pubsub-topic": "com.lab4.cs437",
+          "ipc-subscribe-topics": ["vehicle/emission/data/egress", "ipc/lab4sec2/error"],
+          "mqtt-subscribe-topics": ["vehicle/emission/data/egress", "vehicle/emission/data/error"]
+        },
+        "accessControl": {
+          "aws.greengrass.ipc.pubsub": {
+            "com.lab4.cs437:pubsub:1": {
+              "policyDescription": "Allows access to publish/subscribe to all topics.",
+              "operations": [
+                "aws.greengrass#PublishToTopic",
+                "aws.greengrass#SubscribeToTopic"
+              ],
+              "resources": [
+                "*"
+              ]
+            }
+          },
+          "aws.greengrass.ipc.mqttproxy": {
+        "com.lab4.cs437:mqttproxy:1": {
+          "policyDescription": "Allows access to publish/subscribe to all topics.",
+          "operations": [
+            "aws.greengrass#PublishToIoTCore",
+            "aws.greengrass#SubscribeToIoTCore"
+          ],
+          "resources": [
+            "*"
+          ]
+        }
+      }
+        }
+      }
+    },
+    "Manifests": [
+      {
+        "Name": "Linux",
+        "Platform": {
+          "os": "linux"
+        },
+        "Artifacts": [
+          {
+            "URI": "s3://BUCKET_NAME/COMPONENT_NAME/COMPONENT_VERSION/greengrass-component-artifacts/src.zip",
+            "Unarchive": "ZIP"
+          }
+        ],
+        "Lifecycle": {
+          "Install" : {
+            "Timeout" : 300,
+            "Script" : "python3 -m pip install awsiotsdk"
+          },
+          
+      "Run": {
+            "Script": "python3 -u {artifacts:decompressedPath}/src/main.py",
+            "RequiresPrivilege": "false"
+          }
+        }
+      }
+    ]
+  }
+  
