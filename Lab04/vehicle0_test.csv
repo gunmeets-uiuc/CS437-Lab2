@@ -1,0 +1,6 @@
+timestep_time,vehicle_CO,vehicle_CO2,vehicle_HC,vehicle_NOx,vehicle_PMx,vehicle_angle,vehicle_eclass,vehicle_electricity,vehicle_fuel,vehicle_id,vehicle_lane,vehicle_noise,vehicle_pos,vehicle_route,vehicle_speed,vehicle_type,vehicle_waiting,vehicle_x,vehicle_y
+0.0,0.0,2416.04,0.01,0.72,0.01,42.25,HBEFA3/PC_G_EU4,0.0,1.04,veh0,5330181#0_0,65.15,5.1,!veh0!var#1,14.72,veh_passenger,0.0,18279.94,24533.12
+1.0,0.0,50.60,0.0,0.0,0.0,42.25,HBEFA3/PC_G_EU4,0.0,0.0,veh0,5330181#0_0,62.72,18.85,!veh0!var#1,13.75,veh_passenger,0.0,18289.19,24543.3
+2.0,0.0,52.60,0.0,0.0,0.0,42.25,HBEFA3/PC_G_EU4,0.0,0.0,veh0,5330181#0_0,61.3,31.36,!veh0!var#1,12.51,veh_passenger,0.0,18297.59,24552.56
+3.0,0.0,53.60,0.0,0.0,0.0,40.62,HBEFA3/PC_G_EU4,0.0,0.0,veh0,5330181#0_0,55.09,39.88,!veh0!var#1,8.52,veh_passenger,0.0,18303.19,24558.98
+4.0,0.0,54.60,0.0,0.0,0.0,34.08,HBEFA3/PC_G_EU4,0.0,0.0,veh0,:37981946_10_0,48.52,3.9,!veh0!var#1,4.77,veh_passenger,0.0,18305.84,24562.94
